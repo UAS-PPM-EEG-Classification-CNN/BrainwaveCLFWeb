@@ -1,0 +1,67 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ======= Breadcrumbs ======= -->
+<section class="breadcrumbs">
+  <div class="container">
+    <ol>
+      <li><a href="index.html">Home</a></li>
+      <li>Tools</li>
+    </ol>
+    <h2>Brainwave Classifier Tools</h2>
+
+  </div>
+</section><!-- End Breadcrumbs -->
+
+
+<section class="inner-page">
+  <form id="FormUploadFile" action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="justify-content-center container lg-3 py-3 px-3 mt-5 ">
+      <h2 class="text-center" data-aos="fade-down" data-aos-delay="100">
+        Upload a Brainwave Image File (PNG) or EDF
+      </h2>
+
+      <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+      <div class="file-upload" data-aos="fade-up" data-aos-delay="200">
+        <button class="file-upload-btn" type="button" onclick="$('.file-upload-input').trigger('click')">Upload
+          File</button>
+        <div class="image-upload-wrap">
+          <input id="fileInput" class="file-upload-input" name="file" type="file" onchange="handleFileSelect(this);" required/>
+          <div class="drag-text">
+            <h3 id="filenameForm">Drag and drop a file or select Upload File</h3>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-end mt-3">
+        <div class="col-lg-3 text-center" data-aos="fade-right" data-aos-delay="200">
+          <button type="submit" class="btn btn-primary btn-lg">Start <i class="bi bi-arrow-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </form>
+</section>
+
+<script>
+  document.getElementById('fileInput').onchange = function () {
+    filenameForm.innerText = this.files[0].name;
+  };
+
+  document.querySelector('#FormUploadFile').addEventListener(
+    'submit',
+    function (e) {
+      var form = this;
+
+      e.preventDefault(); // <--- prevent form from submitting
+      Swal.fire({
+        title: 'Memproses mohon tunggu',
+        allowEscapeKey: false,
+        allowOutsideClick: false,
+      });
+      swal.showLoading();
+      form.submit();
+    });
+</script>
+
+{% endblock %}

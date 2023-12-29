@@ -1,0 +1,22 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="inner-page">
+  <div class="container py-3 px-3 mt-5 text-center">
+    <h2 class="mb-3" data-aos="fade-down">
+      The Results is:
+    </h2>
+      {% if hasil == 'Rest' %}
+              <img src="{% static 'assets/img/rest.png' %}" alt="thinking of moving hand" data-aos="fade-up">
+     {% else %}
+              <img src="{% static 'assets/img/thinking.png' %}" alt="thinking of moving hand" data-aos="fade-up">
+      {% endif %}
+    <h3 class="mt-3"  data-aos="fade-up">{{ hasil }}</h3>
+  </div>
+  <div class="container py-3 px-3 mt-3 text-start" data-aos="fade-left">
+    <button type="button" onclick="window.location.href='/predict'" class="btn btn-primary btn-lg"><i
+        class="bi bi-arrow-left"></i> Try Again</button>
+  </div>
+</section>
+{% endblock %}

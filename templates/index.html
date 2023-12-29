@@ -1,0 +1,190 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- ======= Hero Section ======= -->
+<section id="hero" class="hero d-flex align-items-center">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex flex-column justify-content-center">
+        <h1 data-aos="fade-up">A Machine-Learning-based Tool for Brainwave Classifier</h1>
+        <h2 data-aos="fade-up" data-aos-delay="400">We made an Machine Learning Project for human movement classifier
+          based on brainwaves </h2>
+        <div data-aos="fade-up" data-aos-delay="600">
+          <div class="text-center text-lg-start">
+            <a href="/predict"
+              class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <span>Use Now</span>
+              <i class="bi bi-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="200">
+        <img src="{% static 'assets/img/landingpage1.svg' %}" class="img-fluid pt-3 mt-4" alt="brainwaveClassifier">
+      </div>
+    </div>
+  </div>
+
+</section><!-- End Hero -->
+
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+
+  <div class="container" data-aos="fade-up">
+    <div class="row gx-0">
+
+      <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+        <div class="content">
+          <h3>What We Have Made?</h3>
+          <h2>Klasifikasi Gerakan Manusia dari Gelombang Sinyal Otak</h2>
+          <p>
+            Dengan menggunakan teknologi Convolutional Neural Network (CNN) dan bahasa pemrograman Python, kami
+            menciptakan
+            Web-app untuk memahami berbagai gerakan manusia, yaitu posisi rest dan keinginan menggerakkan tangan.
+            Teknologi CNN memungkinkan kami untuk melatih model yang cerdas dan responsif,
+            memberikan pengalaman yang lebih baik dalam mendeteksi dan merespons gerakan manusia secara
+            real-time.Dengan antarmuka yang intuitif, Anda dapat dengan mudah berinteraksi dengan web-app kami dan
+            mengalami kecanggihan teknologi klasifikasi gelombang otak.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+        <img src="{% static 'assets/img/aboutus.jpg' %}" class="img-fluid" alt="">
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- End About Section -->
+
+<!-- How to Use  -->
+<section id="howtouse" class="howtouse">
+  <div class="row feature-icons" data-aos="fade-up">
+
+    <header class="section-header" data-aos="fade-left" data-aos-delay="50">
+      <p>How To Use</p>
+    </header>
+
+    <div class="col-xl-4 text-center" data-aos="fade-right" data-aos-delay="100">
+      <img src="{% static 'assets/img/howtouse.svg' %}" class="img-fluid p-4" alt="">
+    </div>
+    <div class="col-xl-7 d-flex content">
+      <div class="row align-self-center gy-4">
+        <div class="col-md-6 icon-box" data-aos="fade-up">
+          <h4>1. Siapkan File Brainwave Image atau EDF</h4>
+          <p>Ini adalah persyaratan file yang dapat diklasifikasi oleh model kami, untuk image berupa PNG</p>
+        </div>
+
+        <div class="col-md-6 icon-box" data-aos="fade-up">
+          <h4>2. Unggah File Brainwave Image</h4>
+          <p>Unggah sebuah file Brainwave Image yang ingin diklasifikasikan</p>
+        </div>
+
+        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+          <div>
+            <h4>3. Klik Tombol "Start"</h4>
+            <p>Setelah File berhasil diunggah, klik "Start" untuk mulai klasifikasi</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+          <div>
+            <h4>4. Tunggu Hasilnya</h4>
+            <p>Proses ini mungkin akan memakan waktu...</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+          <div>
+            <h4>5. Hasil ditampilkan</h4>
+            <p>Hasil Klasifikasi dari file Brainwave Image akan disajikan berdasarkan pelatihan yang telah dilakukan
+              model kami</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+          <div>
+            <h4>6. Ulangi atau Selesai</h4>
+            <p>Anda bisa mengulangi lagi dengan menggunakan file baru dengan tombol "Try Again" ataupun selesai.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ======= Team Section ======= -->
+<section id="team" class="team">
+
+  <div class="container" data-aos="fade-up">
+
+    <header class="section-header">
+      <p>Team Member</p>
+    </header>
+
+    <div class="row">
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+        <div class="member">
+          <div class="member-img">
+            <img src="{% static 'assets/img/team/jeremi.jpeg' %}" class="img-fluid" alt="">
+            <div class="social">
+              <a href="https://github.com/Jrhero14"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/jeremiheroabed/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Jeremi Herodian Abednigo</h4>
+            <span>2008561042</span>
+            <p>Back-end Developer; connects the ML model with the Front-end using Django Framework</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+        <div class="member">
+          <div class="member-img">
+            <img src="{% static 'assets/img/team/putri.png' %}" class="img-fluid" alt="">
+            <div class="social">
+              <a href="https://github.com/psummerxzy"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/putrisuari/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Maharani Putri Suari</h4>
+            <span>2008561058</span>
+            <p>Front-end Developer; Creates the Front-end Using Bootstrap 5 Framework and Javascript</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="300">
+        <div class="member">
+          <div class="member-img">
+            <img src="{% static 'assets/img/team/gungendik.png' %}" class="img-fluid" alt="">
+            <div class="social">
+              <a href="https://github.com/DimensionalDragon"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/andhikasatrya/"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="member-info">
+            <h4>Anak Agung Ngurah Andhika S N</h4>
+            <span>2008561077</span>
+            <p>Machine Learning Engineer; makes the model for brainwave classifier using Python</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section><!-- End Team Section -->
+
+{% endblock %}
